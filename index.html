@@ -8,13 +8,13 @@
 
   <body>
     <a-scene background="color: #CFE8FF">
-      <!-- SIMPLE SKY (Back to your original style) -->
+      <!-- SKY -->
       <a-sky color="#CFE8FF"></a-sky>
 
-      <!-- CAMERA (Mouse Rotation Enabled Again) -->
+      <!-- CAMERA -->
       <a-entity
         camera
-        position="0 2 -40"
+        position="0 3 -55"
         rotation="0 0 0"
         look-controls
         wasd-controls
@@ -23,15 +23,18 @@
 
       <!-- LIGHTING -->
       <a-light type="ambient" intensity="0.6"></a-light>
-      <a-light type="directional" position="20 30 -10" intensity="1.2">
-      </a-light>
+      <a-light
+        type="directional"
+        position="20 30 -10"
+        intensity="1.2"
+      ></a-light>
 
       <!-- GROUND -->
       <a-plane
         position="0 0 0"
         rotation="-90 0 0"
-        width="160"
-        height="160"
+        width="200"
+        height="200"
         color="#6DBF4B"
       >
       </a-plane>
@@ -57,20 +60,23 @@
       >
       </a-text>
 
-      <!-- HOUSE -->
+      <!-- ===================== -->
+      <!-- HOUSE (SCALED UP) -->
+      <!-- ===================== -->
       <a-entity
         gltf-model="url(assets/house.glb)"
         position="0 0 0"
         rotation="0 180 0"
+        scale="2.5 2.5 2.5"
       >
       </a-entity>
 
-      <!-- INTERIOR -->
+      <!-- INTERIOR (MATCH HOUSE SCALE) -->
       <a-entity
         gltf-model="url(assets/interior.glb)"
-        position="0 0.08 0"
+        position="0 0.2 0"
         rotation="0 180 0"
-        scale="0.9 0.9 0.9"
+        scale="2.3 2.3 2.3"
       >
       </a-entity>
 
@@ -100,31 +106,31 @@
       <!-- TREES -->
       <a-entity
         gltf-model="url(assets/trees.glb)"
-        position="20 0 -6"
-        rotation="0 25 0"
-        scale="3.5 3.5 3.5"
+        position="25 0 -10"
+        rotation="0 20 0"
+        scale="3 3 3"
       >
       </a-entity>
 
       <a-entity
         gltf-model="url(assets/trees.glb)"
-        position="24 0 -12"
-        rotation="0 -15 0"
-        scale="3.5 3.5 3.5"
+        position="30 0 -16"
+        rotation="0 -10 0"
+        scale="3 3 3"
       >
       </a-entity>
 
       <!-- POOL -->
       <a-entity
         gltf-model="url(assets/pool.glb)"
-        position="35 0 0"
+        position="45 0 0"
         rotation="0 90 0"
       >
       </a-entity>
 
       <!-- WATER EFFECT -->
       <a-plane
-        position="35 0.15 0"
+        position="45 0.15 0"
         rotation="-90 0 0"
         width="8"
         height="4"
